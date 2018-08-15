@@ -1,5 +1,3 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +13,6 @@ public class Test60 {
     public void beforeMethod() {
         Driver.openLoginPage();
         loginPage = new LoginPage();
-
     }
 
     @AfterMethod

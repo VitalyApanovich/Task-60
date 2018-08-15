@@ -1,13 +1,15 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 class InboxPage extends Page{
     private final static String TITLE = "Входящие - Почта Mail.Ru";
-    private static final By LOGOUT_LINK = By.id("PH_logoutLink");
+    @FindBy(id = "PH_logoutLink")
+    private WebElement logoutLink;
 
     InboxPage() {
         super(TITLE);
+        PageFactory.initElements(driver, this);
     }
 
     LoginPage logout() {
@@ -16,7 +18,7 @@ class InboxPage extends Page{
     }
 
     WebElement getLogoutLink() {
-        return driver.findElement(LOGOUT_LINK);
+        return logoutLink;
     }
 
 }
