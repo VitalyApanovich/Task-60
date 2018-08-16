@@ -13,6 +13,7 @@ public class Test60 {
     public void beforeMethod() {
         Driver.openLoginPage();
         loginPage = new LoginPage();
+
     }
 
     @AfterMethod
