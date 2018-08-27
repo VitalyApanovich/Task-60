@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-class InboxPage extends Page{
+class InboxPage extends Page {
     private final static String TITLE = "Входящие - Почта Mail.Ru";
     private static final By LOGOUT_LINK = By.id("PH_logoutLink");
 
@@ -14,7 +14,7 @@ class InboxPage extends Page{
         return new LoginPage();
     }
 
-    WebElement getLogoutLink() {
+    private WebElement getLogoutLink() {
         return driver.findElement(LOGOUT_LINK);
     }
 

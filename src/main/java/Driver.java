@@ -21,7 +21,7 @@ class Driver {
     }
 
     static void openLoginPage() {
-            getDriver().get().navigate().to(URL);
+        getDriver().get().navigate().to(URL);
     }
 
     static void closeDriver() {
